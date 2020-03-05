@@ -2,6 +2,7 @@
 
 A new Flutter application.
 
+[![Build Status](https://github.com/Kalesh-Singh/NumberTrivia/workflows/flutter%20test/badge.svg?branch=master)](https://github.com/Kalesh-Singh/NumberTrivia/actions?query=workflow%3A"flutter+test"+branch%3Amaster)
 ## Getting Started
 
 This project is a starting point for a Flutter application.
