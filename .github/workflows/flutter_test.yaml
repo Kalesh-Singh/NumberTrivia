@@ -1,17 +1,16 @@
-# Name of your workflow.
-name: flutter test ios
+name: flutter test
 
-# Trigger the workflow on push or pull request.
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
 
-# A workflow run is made up of one or more jobs.
 jobs:
-  # id of job, a string that is unique to the "jobs" node above.
-  flutter_test_ios:
-    # Creates a build matrix for your jobs. You can define different
-    # variations of an environment to run each job in.
+  flutter_test:
     runs-on: macOS-latest
-    # Contains a sequence of tasks.
     steps:
       # The branch or tag ref that triggered the workflow will be checked out.
       # https://github.com/actions/checkout
@@ -21,5 +20,5 @@ jobs:
       - uses: subosito/flutter-action@v1
         with:
           channel: 'stable' # or: 'dev' or 'beta'
-      - name: "Run Flutter Unit Tests iOS"
+      - name: "Run Flutter Unit Tests"
         run: "flutter test test"

@@ -1,14 +1,16 @@
-# Name of your workflow.
 name: ios debug run
 
-# Trigger the workflow on push or pull request.
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
 
-# A workflow run is made up of one or more jobs.
 jobs:
-  # id of job, a string that is unique to the "jobs" node above.
   ios_debug_run:
-    # Creates a build matrix for your jobs. You can define different
+    # Creates a build matrix for the jobs. You can define different
     # variations of an environment to run each job in.
     strategy:
       # A set of different configurations of the virtual environment.
@@ -19,11 +21,8 @@ jobs:
       # When set to true, GitHub cancels all in-progress jobs if any matrix job
       # fails.
       fail-fast: false
-    # The type of machine to run the job on.
     runs-on: macOS-latest
-    # Contains a sequence of tasks.
     steps:
-    # A name for your step to display on GitHub.
     - name: "List all simulators"
       run: "xcrun instruments -s"
     - name: "Start Simulator"
@@ -47,4 +46,4 @@ jobs:
     - name: "Run iOS app in Debug Mode"
       run: |
           chmod +x ./scripts/debug-run.sh
-          ./scripts/ios-debug-run.sh
+          ./scripts/debug-run.sh

@@ -1,15 +1,19 @@
-# Name of your workflow.
 name: android debug run
 
-# Trigger the workflow on push or pull request.
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
 
 jobs:
     android_debug_run:
         runs-on: macOS-latest
         strategy:
             matrix:
-                api-level: [21, 23, 29]
+                api-level: [23, 29]
                 target: [default, google_apis]
         steps:
         - name: Checkout
