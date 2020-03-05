@@ -46,4 +46,4 @@ jobs:
         channel: 'stable' # or: 'dev' or 'beta'
     - name: "iOS Debug Run"
       timeout-minutes: 5
-      run: "flutter test test"
+      run: "flutter run"
