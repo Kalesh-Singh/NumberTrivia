@@ -44,7 +44,7 @@ jobs:
     - uses: subosito/flutter-action@v1
       with:
         channel: 'stable' # or: 'dev' or 'beta'
-    - name: "iOS Debug Run"
+    - name: "Run iOS app in Debug Mode"
       run: |
-          chmod +x ./scripts/ios-debug-run.sh
+          chmod +x ./scripts/debug-run.sh
           ./scripts/ios-debug-run.sh
