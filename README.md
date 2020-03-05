@@ -2,7 +2,12 @@
 
 A new Flutter application.
 
-[![Build Status](https://github.com/Kalesh-Singh/NumberTrivia/workflows/flutter%20test/badge.svg?branch=master)](https://github.com/Kalesh-Singh/NumberTrivia/actions?query=workflow%3A"flutter+test"+branch%3Amaster)
+![flutter test](https://github.com/Kalesh-Singh/NumberTrivia/workflows/flutter%20test/badge.svg?branch=master)
+![ios simulator build](https://github.com/Kalesh-Singh/NumberTrivia/workflows/ios%20simulator%20build/badge.svg?branch=master)
+![ios debug run](https://github.com/Kalesh-Singh/NumberTrivia/workflows/ios%20debug%20run/badge.svg?branch=master)
+![android release build](https://github.com/Kalesh-Singh/NumberTrivia/workflows/android%20release%20build/badge.svg?branch=master)
+![android debug run](https://github.com/Kalesh-Singh/NumberTrivia/workflows/android%20debug%20run/badge.svg?branch=master)
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
