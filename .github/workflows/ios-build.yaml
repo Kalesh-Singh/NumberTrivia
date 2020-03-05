@@ -1,5 +1,5 @@
 # Name of your workflow.
-name: flutter test
+name: iOS build
 
 # Trigger the workflow on push or pull request.
 on: [push, pull_request]
