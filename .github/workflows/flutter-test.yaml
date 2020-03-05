@@ -36,7 +36,8 @@ jobs:
                         '$1 == device { print $2 }'
                 )
               xcrun simctl boot "${UDID:?No Simulator with this name found}"
-            # The branch or tag ref  that triggered the workflow will be checkouted.
+            # The branch or tag ref  that triggered the workflow will be
+            # checkied out.
             # https://github.com/actions/checkout
             - uses: actions/checkout@v1
             # Sets up a flutter environment.
