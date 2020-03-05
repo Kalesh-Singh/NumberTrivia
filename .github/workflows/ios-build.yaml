@@ -44,5 +44,5 @@ jobs:
     - uses: subosito/flutter-action@v1
       with:
         channel: 'stable' # or: 'dev' or 'beta'
-    - name: "Run iOS Debug Build"
-      run: "flutter run"
+    - name: "unsigned ios build"
+      run: "flutter build ios --simulator"
