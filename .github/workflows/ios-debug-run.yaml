@@ -45,5 +45,6 @@ jobs:
       with:
         channel: 'stable' # or: 'dev' or 'beta'
     - name: "iOS Debug Run"
-      timeout-minutes: 5
-      run: "flutter run"
+      run: |
+          chmod +x ./scripts/ios-debug-run.sh
+          ./scripts/ios-debug-run.sh
