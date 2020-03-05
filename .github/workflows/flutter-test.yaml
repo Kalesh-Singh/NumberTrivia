@@ -35,7 +35,7 @@ jobs:
             -v 'device=${{ matrix.device }}' \
             '$1 == device { print $2 }'
         )
-        open -b com.apple.iphonesimulator --args -CurrentDeviceUDID "${UDID:?No Simulator with this name found}"
+        open `xcode-select -p`/Applications/Simulator.app/ --args -CurrentDeviceUDID "${UDID:?No Simulator with this name found}"
     # The branch or tag ref that triggered the workflow will be checked out.
     # https://github.com/actions/checkout
     - uses: actions/checkout@v1
