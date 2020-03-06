@@ -15,11 +15,12 @@ jobs:
             matrix:
                 api-level: [23, 29]
                 target: [default, google_apis]
-                profile: [Nexus 6, Pixel 3]
+                profile: [Nexus 6]
         steps:
         - name: Checkout
           uses: actions/checkout@v2
-
+        - name: List Available Emulators
+          run: $ANDROID_HOME/tools/bin/avdmanager list
         - name: Run Android app in Debug Mode
           uses: reactivecircus/android-emulator-runner@v2
           with:
