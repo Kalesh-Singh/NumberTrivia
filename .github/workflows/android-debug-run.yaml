@@ -15,7 +15,7 @@ jobs:
             matrix:
                 api-level: [23, 29]
                 target: [default, google_apis]
-                profile: [Nexus 6, Pixel XL]
+                profile: [Nexus 6, pixel_xl]
         steps:
         - name: Checkout
           uses: actions/checkout@v2
