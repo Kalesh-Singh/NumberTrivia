@@ -15,6 +15,7 @@ jobs:
             matrix:
                 api-level: [23, 29]
                 target: [default, google_apis]
+                profile: [Nexus 6, Pixel 3]
         steps:
         - name: Checkout
           uses: actions/checkout@v2
@@ -25,5 +26,5 @@ jobs:
             api-level: ${{ matrix.api-level }}
             target: ${{ matrix.target }}
             arch: x86_64
-            profile: Nexus 6
+            profile: ${{ matrix.profile }}
             script: ./scripts/debug-run.sh
